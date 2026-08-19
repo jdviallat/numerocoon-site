@@ -96,6 +96,15 @@
   .privacy .eyebrow{color:var(--amethyste-clair)}
   .privacy .sub{color:#CBBFE4}
 
+  /* Versions */
+  .vlist{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  .vrow{display:flex;gap:18px;align-items:flex-start;background:var(--carte);border:1px solid var(--carte-bord);border-radius:16px;padding:18px 20px;text-align:left}
+  .vnum{flex:0 0 92px;color:var(--or);font-weight:800;font-size:20px;line-height:1.1}
+  .vnum small{display:block;color:var(--amethyste);font-weight:600;font-size:11px;margin-top:4px}
+  .vrow p{color:var(--muted);font-size:14.5px;margin:0}
+  .more{display:block;text-align:center;margin-top:26px;color:var(--or);font-weight:700;text-decoration:none}
+  .more:hover{text-decoration:underline}
+
   footer{background:var(--nuit-2);color:#9AA6B8;text-align:center;padding:40px 0;font-size:13.5px;border-top:1px solid var(--carte-bord)}
   footer a{color:var(--or);text-decoration:none}
   footer .disc{max-width:660px;margin:16px auto 0;font-size:12px;color:#75808F;line-height:1.5}
@@ -110,6 +119,7 @@
     <nav>
       <a href="#fonctions">Fonctions</a>
       <a href="#gratuit">Gratuit</a>
+      <a href="#versions">Versions</a>
       <a href="#confidentialite">Confidentialité</a>
       <a href="privacy.html">Mentions</a>
     </nav>
@@ -126,7 +136,10 @@
     <h1>Numerocoon</h1>
     <p class="lead">Numérologie & horoscope réunis. À partir de votre date, votre heure et votre lieu de naissance, découvrez votre thème, votre ascendant et une guidance qui vous ressemble.</p>
     <div class="stores">
-      <a class="store" href="https://play.google.com/store/apps/details?id=com.bengacoon.numerocoon">
+      <a class="store" href="https://github.com/jdviallat/numerocoon/releases/latest">
+        <span class="em">⬇</span><span><small>Android · APK direct</small>Télécharger</span>
+      </a>
+      <a class="store soon" href="https://play.google.com/store/apps/details?id=com.bengacoon.numerocoon">
         <span class="em">▶</span><span><small>Bientôt sur</small>Google&nbsp;Play</span>
       </a>
       <a class="store soon" href="#">
@@ -197,6 +210,21 @@
       <span class="chip">Italiano</span><span class="chip">Português</span><span class="chip">Español</span>
       <span class="chip">Svenska</span><span class="chip">Norsk</span><span class="chip">Suomi</span>
     </div>
+  </div>
+</section>
+
+<section id="versions">
+  <div class="wrap">
+    <div class="eyebrow">Toujours en mouvement</div>
+    <h2>Les dernières versions</h2>
+    <p class="sub">Numerocoon évolue régulièrement — voici les nouveautés récentes. L'historique complet est sur GitHub.</p>
+    <div class="vlist">
+      <div class="vrow"><div class="vnum">0.15<small>Biorythmes & PDF</small></div><p>Biorythmes du jour (physique, émotionnel, intellectuel), rubrique « Découvrir » pour tout comprendre, et export du thème complet en PDF.</p></div>
+      <div class="vrow"><div class="vnum">0.14<small>iOS &amp; Android</small></div><p>Alignement des versions iOS et Android et préparation de la publication sur les deux plateformes.</p></div>
+      <div class="vrow"><div class="vnum">0.13<small>Réglages &amp; marque</small></div><p>Roue crantée d'accès aux Réglages et signature « par Bengacoon » sur l'accueil.</p></div>
+      <div class="vrow"><div class="vnum">0.12<small>100 % traduit</small></div><p>Localisation complète, jusqu'aux phrases assemblées, dans les 9 langues.</p></div>
+    </div>
+    <a class="more" href="https://github.com/jdviallat/numerocoon/blob/main/CHANGELOG.md">Voir tout l'historique des versions →</a>
   </div>
 </section>
 
