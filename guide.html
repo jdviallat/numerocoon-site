@@ -19,11 +19,12 @@
   a{color:var(--or)}
   .wrap{max-width:900px;margin:0 auto;padding:0 22px}
   header{position:sticky;top:0;z-index:20;background:rgba(16,30,51,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--carte-bord)}
-  header .wrap{display:flex;align-items:center;gap:12px;height:60px}
-  header img{width:32px;height:32px;border-radius:8px}
-  header .brand{font-weight:800;font-size:17px}
-  header .brand small{display:block;font-weight:600;font-size:10px;color:var(--muted)}
-  header nav{margin-left:auto;display:flex;gap:18px;font-size:14px;font-weight:600}
+  header .wrap{display:flex;align-items:center;gap:12px;height:64px}
+  header img{width:36px;height:36px;border-radius:9px}
+  header .brand{font-weight:800;font-size:19px;letter-spacing:.2px}
+  header .brand small{display:block;font-weight:600;font-size:11px;color:var(--muted);letter-spacing:.3px}
+  header nav{margin-left:auto;display:flex;gap:22px;font-size:14px;font-weight:600}
+  @media(max-width:640px){header nav{display:none}}
   header nav a{color:var(--muted);text-decoration:none}
   header nav a:hover{color:var(--or)}
   .hero{background:linear-gradient(165deg,#1B2A46 0%,var(--nuit) 60%);padding:44px 0 30px;text-align:center}
@@ -58,6 +59,7 @@
     <nav>
       <a href="index.html">Accueil</a>
       <a href="index.html#fonctions">Fonctions</a>
+      <a href="guide.html">Guide</a>
       <a href="privacy.html">Confidentialité</a>
     </nav>
   </div>

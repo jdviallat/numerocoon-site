@@ -1,157 +1,176 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Numerocoon — Politique de confidentialité / Privacy Policy</title>
+<title>Politique de confidentialité — Numerocoon</title>
 <link rel="icon" href="assets/favicon.png">
 <style>
-  :root{ --nuit:#101E33; --carte:#182842; --amethyste:#B98FE0; --or:#E3C77A; --texte:#F0E7D3; --muted:#B7B0A0; --bord:#26385A; }
-  *{box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:780px;margin:0 auto;padding:34px 22px 70px;color:var(--texte);background:var(--nuit);line-height:1.65}
+  :root{--nuit:#101E33;--nuit-2:#0A1526;--or:#E3C77A;--or-2:#C9A24B;--amethyste:#B98FE0;--texte:#F0E7D3;--muted:#B7B0A0;--carte:#182842;--carte-bord:#26385A;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--texte);background:var(--nuit);line-height:1.65}
   a{color:var(--or)}
-  .brand{color:var(--or);font-weight:800;letter-spacing:2px;font-size:14px}
-  h1{font-size:1.9rem;margin:.2em 0 .1em}
-  h2{color:var(--amethyste);margin-top:1.7em;font-size:1.2rem}
-  .date{color:var(--muted);font-size:.95rem;margin-bottom:6px}
-  .card{background:var(--carte);border:1px solid var(--bord);border-radius:14px;padding:16px 18px;margin:18px 0}
-  code{background:#0C182B;border:1px solid var(--bord);padding:1px 6px;border-radius:5px;color:var(--amethyste)}
-  ul{padding-left:20px}
-  hr{border:none;border-top:1px solid var(--bord);margin:2.6em 0}
-  .back{display:inline-block;margin-bottom:18px;color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
-  .back:hover{color:var(--or)}
-  footer{color:var(--muted);font-size:.85rem;margin-top:36px;border-top:1px solid var(--bord);padding-top:16px}
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;z-index:20;background:rgba(16,30,51,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--carte-bord)}
+  header .wrap{display:flex;align-items:center;gap:12px;height:64px}
+  header img{width:36px;height:36px;border-radius:9px}
+  header .brand{font-weight:800;font-size:19px;letter-spacing:.2px}
+  header .brand small{display:block;font-weight:600;font-size:11px;color:var(--muted);letter-spacing:.3px}
+  header nav{margin-left:auto;display:flex;gap:22px;font-size:14px;font-weight:600}
+  header nav a{color:var(--muted);text-decoration:none}
+  header nav a:hover{color:var(--or)}
+  @media(max-width:640px){header nav{display:none}}
+  .hero{background:linear-gradient(165deg,#1B2A46 0%,var(--nuit) 60%);padding:40px 0 26px;text-align:center}
+  .hero h1{font-size:32px;font-weight:800}
+  .hero .date{color:var(--muted);font-size:13.5px;margin-top:6px}
+  main{padding:26px 0 70px}
+  .card{background:var(--carte);border:1px solid var(--carte-bord);border-radius:14px;padding:16px 20px;margin:16px 0}
+  h2{color:var(--amethyste);font-size:18px;margin:26px 0 8px}
+  p{color:#D9D2C2;margin-bottom:8px}
+  ul{padding-left:20px;margin-bottom:8px}
+  li{color:#D9D2C2;margin:3px 0}
+  code{background:#0C182B;border:1px solid var(--carte-bord);padding:1px 6px;border-radius:5px;color:var(--amethyste)}
+  hr{border:none;border-top:1px solid var(--carte-bord);margin:2.4em 0}
+  footer{background:var(--nuit-2);color:#9AA6B8;text-align:center;padding:34px 0;font-size:13px;border-top:1px solid var(--carte-bord)}
+  footer a{color:var(--or);text-decoration:none}
 </style>
 </head>
 <body>
-<a class="back" href="index.html">← Retour</a>
-<div class="brand">NUMEROCOON</div>
 
-<h1>Politique de confidentialité</h1>
-<p class="date">Dernière mise à jour : 25 juillet 2026 · Éditeur : Bengacoon</p>
+<header>
+  <div class="wrap">
+    <img src="assets/icon.png" alt="Numerocoon">
+    <div class="brand">Numerocoon<small>par Bengacoon</small></div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="index.html#fonctions">Fonctions</a>
+      <a href="guide.html">Guide</a>
+      <a href="privacy.html">Confidentialité</a>
+    </nav>
+  </div>
+</header>
 
-<div class="card">
-  <strong>En résumé :</strong> Numerocoon ne collecte, ne transmet et ne partage
-  <strong>aucune donnée personnelle</strong>. Il n'y a ni compte en ligne, ni publicité, ni traceur,
-  ni outil de mesure d'audience. Tout ce que vous saisissez reste <strong>uniquement sur votre
-  appareil</strong>. La seule connexion à Internet sert à vérifier s'il existe une mise à jour de
-  l'application — <em>aucune information vous concernant n'est envoyée</em>.
+<div class="hero">
+  <div class="wrap">
+    <h1>Politique de confidentialité</h1>
+    <div class="date">Dernière mise à jour : 1 septembre 2026 · Éditeur : Bengacoon</div>
+  </div>
 </div>
 
-<h2>1. Qui sommes-nous</h2>
-<p>Numerocoon est une application de numérologie et d'horoscope de bien-être, éditée dans le cadre
-de l'univers Bengacoon. Pour toute question, écrivez-nous à
-<a href="mailto:jdviallat@gmail.com">jdviallat@gmail.com</a>.</p>
+<main class="wrap">
+  <div class="card">
+    <strong>En résumé :</strong> Numerocoon ne collecte, ne transmet et ne partage
+    <strong>aucune donnée personnelle</strong>. Il n'y a ni compte en ligne, ni publicité, ni traceur,
+    ni outil de mesure d'audience. Tout ce que vous saisissez reste <strong>uniquement sur votre
+    appareil</strong>. La seule connexion à Internet sert à vérifier s'il existe une mise à jour de
+    l'application — <em>aucune information vous concernant n'est envoyée</em>.
+  </div>
 
-<h2>2. Données que nous collectons</h2>
-<p><strong>Aucune.</strong> Nous ne collectons aucune donnée personnelle. L'application ne crée
-aucun compte sur un serveur, ne vous identifie pas, et ne contient ni publicité, ni traceur, ni
-outil d'analyse.</p>
+  <h2>1. Qui sommes-nous</h2>
+  <p>Numerocoon est une application de numérologie et d'horoscope de bien-être, éditée dans le cadre
+  de l'univers Bengacoon. Questions : <a href="mailto:jdviallat@gmail.com">jdviallat@gmail.com</a>.</p>
 
-<h2>3. Données enregistrées sur votre appareil</h2>
-<p>Pour fonctionner, l'application enregistre certaines informations localement, sur votre seul
-téléphone (jamais sur un serveur) :</p>
-<ul>
-  <li>votre profil : prénom, nom et e-mail éventuels — tous facultatifs sauf le prénom ;</li>
-  <li>vos données de naissance : date, heure et lieu (nécessaires au calcul du thème et de
-      l'ascendant) ;</li>
-  <li>les proches que vous enregistrez pour la compatibilité (prénom et données de naissance) ;</li>
-  <li>vos réponses au questionnaire de guidance et les notes de votre journal ;</li>
-  <li>vos préférences : langue, heure du rappel quotidien.</li>
-</ul>
-<p>Ces données ne quittent jamais votre appareil et ne nous sont jamais transmises.</p>
+  <h2>2. Données que nous collectons</h2>
+  <p><strong>Aucune.</strong> Nous ne collectons aucune donnée personnelle. L'application ne crée
+  aucun compte sur un serveur, ne vous identifie pas, et ne contient ni publicité, ni traceur, ni
+  outil d'analyse.</p>
 
-<h2>4. Permissions et accès réseau</h2>
-<ul>
-  <li><strong>Notifications</strong> : uniquement pour le rappel quotidien que vous activez
-      vous-même. Les rappels sont programmés localement, sans serveur.</li>
-  <li><strong>Internet</strong> : utilisé uniquement pour <strong>vérifier l'existence d'une mise
-      à jour</strong>. L'application télécharge un petit fichier public et compare le numéro de
-      version. <strong>Aucune donnée vous concernant n'est envoyée.</strong></li>
-</ul>
-<p>L'application ne demande pas l'accès à la localisation, aux contacts, au micro, à la caméra ni à
-vos fichiers. Le lieu de naissance est choisi dans une liste intégrée : votre position réelle
-n'est jamais utilisée.</p>
+  <h2>3. Données enregistrées sur votre appareil</h2>
+  <p>Pour fonctionner, l'application enregistre certaines informations localement, sur votre seul
+  téléphone (jamais sur un serveur) :</p>
+  <ul>
+    <li>votre profil : prénom, nom et e-mail éventuels ;</li>
+    <li>vos données de naissance : date, heure et lieu (pour le thème et l'ascendant) ;</li>
+    <li>les proches et animaux que vous enregistrez (nom, données de naissance, photo) ;</li>
+    <li>vos réponses au questionnaire de guidance et les notes de votre journal ;</li>
+    <li>vos préférences : langue, taille du texte, heure du rappel quotidien.</li>
+  </ul>
+  <p>Ces données ne quittent jamais votre appareil et ne nous sont jamais transmises.</p>
 
-<h2>5. Partage avec des tiers</h2>
-<p>Aucun. La fonction « Partager ma journée » utilise le partage de votre système : le texte n'est
-transmis qu'à l'application que <em>vous</em> choisissez, à votre seule initiative. La vérification
-de mise à jour contacte les serveurs de GitHub, qui peuvent enregistrer techniquement l'adresse IP
-à l'origine de la requête, comme pour toute visite d'un site web ; nous n'y avons pas accès.</p>
+  <h2>4. Permissions et accès réseau</h2>
+  <ul>
+    <li><strong>Notifications</strong> : uniquement pour le rappel quotidien que vous activez.</li>
+    <li><strong>Photos</strong> : uniquement si vous ajoutez une photo à un profil ; l'image reste sur votre appareil.</li>
+    <li><strong>Internet</strong> : uniquement pour <strong>vérifier l'existence d'une mise à jour</strong>. <strong>Aucune donnée vous concernant n'est envoyée.</strong></li>
+  </ul>
+  <p>L'application ne demande pas l'accès à la localisation, aux contacts, au micro ou à la caméra.
+  Le lieu de naissance est choisi dans une liste intégrée.</p>
 
-<h2>6. Conservation et suppression</h2>
-<p>Vos données restent sur votre appareil tant que vous le souhaitez. Vous pouvez les effacer à tout
-moment depuis l'application (roue des Réglages → « Modifier / recréer mon compte ») ou en
-désinstallant l'application.</p>
+  <h2>5. Partage avec des tiers</h2>
+  <p>Aucun. Le partage (« Partager ma journée », carte du jour, sauvegarde, PDF) utilise le partage
+  de votre système : le contenu n'est transmis qu'à l'application que <em>vous</em> choisissez. La
+  vérification de mise à jour contacte GitHub, qui peut techniquement enregistrer l'adresse IP à
+  l'origine de la requête ; nous n'y avons pas accès.</p>
 
-<h2>7. Enfants</h2>
-<p>L'application ne s'adresse pas particulièrement aux enfants et ne collecte aucune donnée les
-concernant, comme pour tous les utilisateurs.</p>
+  <h2>6. Conservation et suppression</h2>
+  <p>Vos données restent sur votre appareil tant que vous le souhaitez. Vous pouvez les exporter,
+  les restaurer, les effacer depuis les Réglages, ou tout supprimer en désinstallant l'application.</p>
 
-<h2>8. Avertissement bien-être</h2>
-<p>Numerocoon propose un support d'introspection et de bien-être, fondé sur des traditions
-symboliques (numérologie, astrologie). Ce n'est ni une prédiction, ni un dispositif médical, ni un
-avis financier ou juridique, et cela ne remplace pas l'avis d'un professionnel qualifié.</p>
+  <h2>7. Enfants</h2>
+  <p>L'application ne s'adresse pas particulièrement aux enfants et ne collecte aucune donnée les
+  concernant.</p>
 
-<hr>
+  <h2>8. Avertissement bien-être</h2>
+  <p>Numerocoon propose un support d'introspection et de bien-être fondé sur des traditions
+  symboliques. Ce n'est ni une prédiction, ni un dispositif médical, ni un avis financier ou
+  juridique.</p>
 
-<h1>Privacy Policy (English)</h1>
-<p class="date">Last updated: 25 July 2026 · Publisher: Bengacoon</p>
+  <hr>
 
-<div class="card">
-  <strong>In short:</strong> Numerocoon collects, transmits and shares
-  <strong>no personal data</strong>. There is no online account, no ads, no tracker, no analytics.
-  Everything you enter stays <strong>on your device only</strong>. The single internet connection is
-  used to check whether an app update exists — <em>no information about you is ever sent</em>.
-</div>
+  <h1 style="font-size:26px">Privacy Policy (English)</h1>
+  <div class="date">Last updated: 1 September 2026 · Publisher: Bengacoon</div>
 
-<h2>1. Who we are</h2>
-<p>Numerocoon is a numerology and horoscope wellbeing app, published as part of the Bengacoon
-universe. Questions: <a href="mailto:jdviallat@gmail.com">jdviallat@gmail.com</a>.</p>
+  <div class="card" style="margin-top:16px">
+    <strong>In short:</strong> Numerocoon collects, transmits and shares <strong>no personal data</strong>.
+    No online account, no ads, no tracker, no analytics. Everything you enter stays
+    <strong>on your device only</strong>. The single internet connection checks whether an app update
+    exists — <em>no information about you is ever sent</em>.
+  </div>
 
-<h2>2. Data we collect</h2>
-<p><strong>None.</strong> We collect no personal data. The app creates no server account, does not
-identify you, and contains no ads, trackers or analytics.</p>
+  <h2>1. Who we are</h2>
+  <p>Numerocoon is a numerology and horoscope wellbeing app, part of the Bengacoon universe.
+  Questions: <a href="mailto:jdviallat@gmail.com">jdviallat@gmail.com</a>.</p>
 
-<h2>3. Data stored on your device</h2>
-<p>To work, the app stores some information locally, on your phone only (never on a server):</p>
-<ul>
-  <li>your profile: optional first name, last name and email — all optional except the first name;</li>
-  <li>your birth data: date, time and place (needed to compute your chart and ascendant);</li>
-  <li>the relatives you save for compatibility (name and birth data);</li>
-  <li>your guidance questionnaire answers and journal notes;</li>
-  <li>your preferences: language, daily reminder time.</li>
-</ul>
-<p>This data never leaves your device and is never transmitted to us.</p>
+  <h2>2. Data we collect</h2>
+  <p><strong>None.</strong> No personal data, no server account, no ads, trackers or analytics.</p>
 
-<h2>4. Permissions and network access</h2>
-<ul>
-  <li><strong>Notifications</strong>: only for the daily reminder you enable yourself, scheduled
-      locally without any server.</li>
-  <li><strong>Internet</strong>: used only to <strong>check whether an update exists</strong>. The
-      app downloads a small public file and compares version numbers.
-      <strong>No data about you is sent.</strong></li>
-</ul>
-<p>The app requests no access to location, contacts, microphone, camera or your files. The birth
-place is picked from a built-in list; your real location is never used.</p>
+  <h2>3. Data stored on your device</h2>
+  <p>To work, the app stores some information locally, on your phone only: your profile; birth data
+  (date, time, place); saved relatives and pets (name, birth data, photo); guidance answers and
+  journal notes; preferences (language, text size, reminder time). This data never leaves your
+  device.</p>
 
-<h2>5. Third-party sharing</h2>
-<p>None. "Share my day" uses your operating system's share sheet: the text goes only to the app
-<em>you</em> pick, at your own initiative. The update check contacts GitHub's servers, which may
-technically log the requesting IP address, as with any website visit; we have no access to it.</p>
+  <h2>4. Permissions and network access</h2>
+  <ul>
+    <li><strong>Notifications</strong>: only for the daily reminder you enable.</li>
+    <li><strong>Photos</strong>: only if you add a photo to a profile; the image stays on your device.</li>
+    <li><strong>Internet</strong>: only to check whether an update exists. <strong>No data about you is sent.</strong></li>
+  </ul>
 
-<h2>6. Retention and deletion</h2>
-<p>Your data stays on your device as long as you want. You can erase it any time from the app
-(Settings wheel → "Edit / recreate my account") or by uninstalling the app.</p>
+  <h2>5. Third-party sharing</h2>
+  <p>None. Sharing uses your operating system's share sheet. The update check contacts GitHub, which
+  may technically log the requesting IP address; we have no access to it.</p>
 
-<h2>7. Children</h2>
-<p>The app is not directed at children and collects no data about them, as for all users.</p>
+  <h2>6. Retention and deletion</h2>
+  <p>Your data stays on your device as long as you want. You can export, restore, or erase it from
+  Settings, or delete everything by uninstalling the app.</p>
 
-<h2>8. Wellbeing notice</h2>
-<p>Numerocoon offers introspection and wellbeing support based on symbolic traditions (numerology,
-astrology). It is not a prediction, not a medical device, not financial or legal advice, and does
-not replace a qualified professional.</p>
+  <h2>7. Children</h2>
+  <p>The app is not directed at children and collects no data about them.</p>
 
-<footer>© 2026 Bengacoon — Numerocoon. Contact : <a href="mailto:jdviallat@gmail.com">jdviallat@gmail.com</a></footer>
+  <h2>8. Wellbeing notice</h2>
+  <p>Numerocoon offers introspection and wellbeing support based on symbolic traditions. It is not a
+  prediction, not a medical device, not financial or legal advice.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Numerocoon</strong> — par Bengacoon · <a href="index.html">Accueil</a> ·
+    <a href="guide.html">Guide</a> · © 2026 Bengacoon<br>
+    Contact : <a href="mailto:jdviallat@gmail.com">jdviallat@gmail.com</a>
+  </div>
+</footer>
+
 </body>
 </html>
