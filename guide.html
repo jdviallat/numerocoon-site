@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guide d'utilisation — Numerocoon</title>
-<meta name="description" content="Le guide complet de Numerocoon : tout ce que vous pouvez faire (numérologie, ascendant, horoscope, compatibilité, profils, biorythmes…) et comment.">
+<title data-i18n="g.meta.title">Guide d'utilisation — Numerocoon</title>
+<meta name="description" data-i18n="g.meta.desc" data-i18n-attr="content" content="Le guide complet de Numerocoon : tout ce que vous pouvez faire (numérologie, ascendant, horoscope, compatibilité, profils, biorythmes…) et comment.">
 <link rel="icon" href="assets/favicon.png">
 <style>
   :root{
@@ -48,6 +48,8 @@
   footer{background:var(--nuit-2);color:#9AA6B8;text-align:center;padding:34px 0;font-size:13px;border-top:1px solid var(--carte-bord)}
   footer a{color:var(--or);text-decoration:none}
   .intro-note{color:var(--muted);font-size:14px;margin-bottom:14px}
+  .lang-select{margin-left:12px;background:var(--carte);color:var(--texte);border:1px solid var(--carte-bord);border-radius:10px;padding:7px 10px;font-size:13px;font-weight:600;cursor:pointer}
+  @media(max-width:640px){.lang-select{margin-left:auto}}
 </style>
 </head>
 <body>
@@ -55,214 +57,222 @@
 <header>
   <div class="wrap">
     <img src="assets/icon.png" alt="Numerocoon">
-    <div class="brand">Numerocoon<small>par Bengacoon</small></div>
+    <div class="brand">Numerocoon<small data-i18n="brand.by">par Bengacoon</small></div>
     <nav>
-      <a href="index.html">Accueil</a>
-      <a href="index.html#fonctions">Fonctions</a>
-      <a href="guide.html">Guide</a>
-      <a href="privacy.html">Confidentialité</a>
+      <a href="index.html" data-i18n="nav.home">Accueil</a>
+      <a href="index.html#fonctions" data-i18n="nav.features">Fonctions</a>
+      <a href="guide.html" data-i18n="nav.guide">Guide</a>
+      <a href="privacy.html" data-i18n="nav.privacy">Confidentialité</a>
     </nav>
+    <select id="ncLang" aria-label="Language" class="lang-select">
+      <option value="fr">Français</option><option value="en">English</option>
+      <option value="de">Deutsch</option><option value="it">Italiano</option>
+      <option value="pt">Português</option><option value="es">Español</option>
+      <option value="sv">Svenska</option><option value="no">Norsk</option>
+      <option value="fi">Suomi</option>
+    </select>
   </div>
 </header>
 
 <div class="hero">
   <div class="wrap">
-    <h1>Guide d'utilisation</h1>
-    <p>Tout ce que vous pouvez faire avec Numerocoon, et comment. L'application est en 9 langues ; ce guide est en français.</p>
+    <h1 data-i18n="g.hero.h1">Guide d'utilisation</h1>
+    <p data-i18n="g.hero.p">Tout ce que vous pouvez faire avec Numerocoon, et comment. L'application est en 9 langues ; ce guide est en français.</p>
   </div>
 </div>
 
 <div class="wrap layout">
 
   <aside class="toc">
-    <h2>Sommaire</h2>
-    <a href="#demarrer">1. Démarrer</a>
-    <a href="#numerologie">2. Numérologie</a>
-    <a href="#astrologie">3. Astrologie</a>
-    <a href="#synthese">4. Synthèse</a>
-    <a href="#profils">5. Mes profils</a>
-    <a href="#compatibilite">6. Compatibilité</a>
-    <a href="#animaux">7. Animaux</a>
-    <a href="#biorythmes">8. Biorythmes</a>
-    <a href="#previsions">9. Prévisions & calendrier</a>
-    <a href="#ciel">10. Le ciel du moment</a>
-    <a href="#guidance">11. Guidance & journal</a>
-    <a href="#carte">12. Carte & partage</a>
-    <a href="#pdf">13. Rapport PDF</a>
-    <a href="#outils">14. Outils</a>
-    <a href="#decouvrir">15. Découvrir</a>
-    <a href="#widget">16. Widget</a>
-    <a href="#reglages">17. Réglages</a>
-    <a href="#maj">18. Mises à jour</a>
-    <a href="#confidentialite">19. Confidentialité</a>
+    <h2 data-i18n="g.toc.title">Sommaire</h2>
+    <a href="#demarrer" data-i18n="g.toc.1">1. Démarrer</a>
+    <a href="#numerologie" data-i18n="g.toc.2">2. Numérologie</a>
+    <a href="#astrologie" data-i18n="g.toc.3">3. Astrologie</a>
+    <a href="#synthese" data-i18n="g.toc.4">4. Synthèse</a>
+    <a href="#profils" data-i18n="g.toc.5">5. Mes profils</a>
+    <a href="#compatibilite" data-i18n="g.toc.6">6. Compatibilité</a>
+    <a href="#animaux" data-i18n="g.toc.7">7. Animaux</a>
+    <a href="#biorythmes" data-i18n="g.toc.8">8. Biorythmes</a>
+    <a href="#previsions" data-i18n="g.toc.9">9. Prévisions & calendrier</a>
+    <a href="#ciel" data-i18n="g.toc.10">10. Le ciel du moment</a>
+    <a href="#guidance" data-i18n="g.toc.11">11. Guidance & journal</a>
+    <a href="#carte" data-i18n="g.toc.12">12. Carte & partage</a>
+    <a href="#pdf" data-i18n="g.toc.13">13. Rapport PDF</a>
+    <a href="#outils" data-i18n="g.toc.14">14. Outils</a>
+    <a href="#decouvrir" data-i18n="g.toc.15">15. Découvrir</a>
+    <a href="#widget" data-i18n="g.toc.16">16. Widget</a>
+    <a href="#reglages" data-i18n="g.toc.17">17. Réglages</a>
+    <a href="#maj" data-i18n="g.toc.18">18. Mises à jour</a>
+    <a href="#confidentialite" data-i18n="g.toc.19">19. Confidentialité</a>
   </aside>
 
   <main>
-    <p class="intro-note">Chaque rubrique indique <strong style="color:var(--amethyste)">où la trouver</strong> dans l'application (onglet en bas, roue des Réglages en haut à droite, ou tuiles d'accès rapide de l'accueil).</p>
+    <p class="intro-note" data-i18n="g.intro.note">Chaque rubrique indique <strong style="color:var(--amethyste)">où la trouver</strong> dans l'application (onglet en bas, roue des Réglages en haut à droite, ou tuiles d'accès rapide de l'accueil).</p>
 
     <section class="doc" id="demarrer">
-      <h2>1. Démarrer — créer votre profil</h2>
-      <div class="ou">À la première ouverture</div>
-      <p>Au lancement, Numerocoon vous demande de créer votre profil. Renseignez :</p>
+      <h2 data-i18n="g.demarrer.h2">1. Démarrer — créer votre profil</h2>
+      <div class="ou" data-i18n="g.demarrer.ou">À la première ouverture</div>
+      <p data-i18n="g.demarrer.p1">Au lancement, Numerocoon vous demande de créer votre profil. Renseignez :</p>
       <ul>
-        <li><strong>Prénom</strong> (obligatoire), nom et e-mail facultatifs ;</li>
-        <li><strong>Date de naissance</strong> (jour, mois, année) ;</li>
-        <li><strong>Heure de naissance</strong> et <strong>lieu</strong> — nécessaires pour calculer votre <em>ascendant</em> (facultatifs, mais recommandés).</li>
+        <li data-i18n="g.demarrer.li1"><strong>Prénom</strong> (obligatoire), nom et e-mail facultatifs ;</li>
+        <li data-i18n="g.demarrer.li2"><strong>Date de naissance</strong> (jour, mois, année) ;</li>
+        <li data-i18n="g.demarrer.li3"><strong>Heure de naissance</strong> et <strong>lieu</strong> — nécessaires pour calculer votre <em>ascendant</em> (facultatifs, mais recommandés).</li>
       </ul>
-      <div class="astuce">🔒 Tout reste sur votre appareil : aucun compte en ligne, aucune donnée envoyée. Un tour de bienvenue vous présente l'app au premier lancement.</div>
+      <div class="astuce" data-i18n="g.demarrer.astuce">🔒 Tout reste sur votre appareil : aucun compte en ligne, aucune donnée envoyée. Un tour de bienvenue vous présente l'app au premier lancement.</div>
     </section>
 
     <section class="doc" id="numerologie">
-      <h2>2. Numérologie</h2>
-      <div class="ou">Onglet « Numérologie »</div>
-      <p>Votre thème numérologique pythagoricien complet :</p>
+      <h2 data-i18n="g.num.h2">2. Numérologie</h2>
+      <div class="ou" data-i18n="g.num.ou">Onglet « Numérologie »</div>
+      <p data-i18n="g.num.p1">Votre thème numérologique pythagoricien complet :</p>
       <ul>
-        <li><strong>Chemin de vie</strong> : votre nombre principal, avec son portrait (forces, défis, en amour, au travail, conseil).</li>
-        <li><strong>Part d'ombre</strong> : la face cachée de votre nombre et son affirmation.</li>
-        <li><strong>Nombres du nom</strong> : expression, âme, personnalité, actif, héréditaire, nombre de naissance.</li>
-        <li><strong>Grille d'inclusion</strong> : vos atouts et vos leçons d'après votre nom.</li>
-        <li><strong>Dettes karmiques</strong> (13, 14, 16, 19), <strong>défis</strong> et <strong>cycles de vie</strong>.</li>
-        <li><strong>Année personnelle</strong> : le thème de votre année en cours.</li>
+        <li data-i18n="g.num.li1"><strong>Chemin de vie</strong> : votre nombre principal, avec son portrait (forces, défis, en amour, au travail, conseil).</li>
+        <li data-i18n="g.num.li2"><strong>Part d'ombre</strong> : la face cachée de votre nombre et son affirmation.</li>
+        <li data-i18n="g.num.li3"><strong>Nombres du nom</strong> : expression, âme, personnalité, actif, héréditaire, nombre de naissance.</li>
+        <li data-i18n="g.num.li4"><strong>Grille d'inclusion</strong> : vos atouts et vos leçons d'après votre nom.</li>
+        <li data-i18n="g.num.li5"><strong>Dettes karmiques</strong> (13, 14, 16, 19), <strong>défis</strong> et <strong>cycles de vie</strong>.</li>
+        <li data-i18n="g.num.li6"><strong>Année personnelle</strong> : le thème de votre année en cours.</li>
       </ul>
     </section>
 
     <section class="doc" id="astrologie">
-      <h2>3. Astrologie & horoscope</h2>
-      <div class="ou">Onglet « Horoscope »</div>
+      <h2 data-i18n="g.astro.h2">3. Astrologie & horoscope</h2>
+      <div class="ou" data-i18n="g.astro.ou">Onglet « Horoscope »</div>
       <ul>
-        <li><strong>Signe solaire</strong> et <strong>ascendant</strong> (calculé astronomiquement depuis votre heure et lieu de naissance).</li>
-        <li><strong>Horoscope du jour</strong> et de la <strong>semaine</strong>, par domaines.</li>
-        <li><strong>Jours favorables</strong> du mois.</li>
-        <li><strong>Compatibilité</strong> rapide entre signes.</li>
+        <li data-i18n="g.astro.li1"><strong>Signe solaire</strong> et <strong>ascendant</strong> (calculé astronomiquement depuis votre heure et lieu de naissance).</li>
+        <li data-i18n="g.astro.li2"><strong>Horoscope du jour</strong> et de la <strong>semaine</strong>, par domaines.</li>
+        <li data-i18n="g.astro.li3"><strong>Jours favorables</strong> du mois.</li>
+        <li data-i18n="g.astro.li4"><strong>Compatibilité</strong> rapide entre signes.</li>
       </ul>
-      <p>Pour la <strong>roue de votre thème</strong> (vos 12 signes en cercle avec Soleil et Ascendant), utilisez la tuile <em>Roue du thème</em> sur l'accueil.</p>
+      <p data-i18n="g.astro.p1">Pour la <strong>roue de votre thème</strong> (vos 12 signes en cercle avec Soleil et Ascendant), utilisez la tuile <em>Roue du thème</em> sur l'accueil.</p>
     </section>
 
     <section class="doc" id="synthese">
-      <h2>4. Synthèse</h2>
-      <div class="ou">Onglet « Synthèse »</div>
-      <p>Une lecture d'ensemble qui relie vos trois piliers : <strong>Soleil × Ascendant × chemin de vie</strong>, avec la combinaison de vos <strong>éléments</strong> dominants (feu, terre, air, eau) et le fil directeur de votre personnalité.</p>
+      <h2 data-i18n="g.synth.h2">4. Synthèse</h2>
+      <div class="ou" data-i18n="g.synth.ou">Onglet « Synthèse »</div>
+      <p data-i18n="g.synth.p1">Une lecture d'ensemble qui relie vos trois piliers : <strong>Soleil × Ascendant × chemin de vie</strong>, avec la combinaison de vos <strong>éléments</strong> dominants (feu, terre, air, eau) et le fil directeur de votre personnalité.</p>
     </section>
 
     <section class="doc" id="profils">
-      <h2>5. Mes profils</h2>
-      <div class="ou">Accueil → tuile « Mes profils » 👪</div>
-      <p>Enregistrez les personnes et les animaux de votre entourage :</p>
+      <h2 data-i18n="g.profils.h2">5. Mes profils</h2>
+      <div class="ou" data-i18n="g.profils.ou">Accueil → tuile « Mes profils » 👪</div>
+      <p data-i18n="g.profils.p1">Enregistrez les personnes et les animaux de votre entourage :</p>
       <ul>
-        <li><strong>Ajouter une personne</strong> : prénom, type de relation (conjoint·e, enfant, parent, frère/sœur, ami·e, collègue…), date, heure et lieu de naissance, et une <strong>photo</strong>.</li>
-        <li><strong>Modifier</strong> (✎) ou <strong>supprimer</strong> (🗑) un profil à tout moment.</li>
-        <li>Touchez une personne pour voir sa <strong>fiche complète</strong> : signe, ascendant, chemin de vie et ses nombres — puis accédez à votre compatibilité.</li>
+        <li data-i18n="g.profils.li1"><strong>Ajouter une personne</strong> : prénom, type de relation (conjoint·e, enfant, parent, frère/sœur, ami·e, collègue…), date, heure et lieu de naissance, et une <strong>photo</strong>.</li>
+        <li data-i18n="g.profils.li2"><strong>Modifier</strong> (✎) ou <strong>supprimer</strong> (🗑) un profil à tout moment.</li>
+        <li data-i18n="g.profils.li3">Touchez une personne pour voir sa <strong>fiche complète</strong> : signe, ascendant, chemin de vie et ses nombres — puis accédez à votre compatibilité.</li>
       </ul>
     </section>
 
     <section class="doc" id="compatibilite">
-      <h2>6. Compatibilité</h2>
-      <div class="ou">Accueil → « Compatibilité », ou depuis un profil</div>
-      <p>Comparez votre thème à celui d'un proche sur <strong>8 dimensions</strong> notées, avec barres de progression : amour, passion, amitié, communication, travail, valeurs, quotidien, stabilité — plus vos <strong>forces</strong> et vos <strong>points de vigilance</strong>. La liste de vos proches est <strong>classée par score</strong> dans « Mes profils ».</p>
+      <h2 data-i18n="g.compat.h2">6. Compatibilité</h2>
+      <div class="ou" data-i18n="g.compat.ou">Accueil → « Compatibilité », ou depuis un profil</div>
+      <p data-i18n="g.compat.p1">Comparez votre thème à celui d'un proche sur <strong>8 dimensions</strong> notées, avec barres de progression : amour, passion, amitié, communication, travail, valeurs, quotidien, stabilité — plus vos <strong>forces</strong> et vos <strong>points de vigilance</strong>. La liste de vos proches est <strong>classée par score</strong> dans « Mes profils ».</p>
     </section>
 
     <section class="doc" id="animaux">
-      <h2>7. Animaux de la famille</h2>
-      <div class="ou">« Mes profils » → Ajouter un animal, ou tuile Animaux 🐾</div>
-      <p>La numérologie fonctionne aussi pour vos compagnons ! Enregistrez un animal (nom, espèce, date, photo) et touchez-le pour voir sa <strong>fiche numérologique</strong> : son nombre, son caractère et un conseil. (Pas d'horoscope pour les animaux : la numérologie suffit.)</p>
+      <h2 data-i18n="g.animaux.h2">7. Animaux de la famille</h2>
+      <div class="ou" data-i18n="g.animaux.ou">« Mes profils » → Ajouter un animal, ou tuile Animaux 🐾</div>
+      <p data-i18n="g.animaux.p1">La numérologie fonctionne aussi pour vos compagnons ! Enregistrez un animal (nom, espèce, date, photo) et touchez-le pour voir sa <strong>fiche numérologique</strong> : son nombre, son caractère et un conseil. (Pas d'horoscope pour les animaux : la numérologie suffit.)</p>
     </section>
 
     <section class="doc" id="biorythmes">
-      <h2>8. Biorythmes</h2>
-      <div class="ou">Accueil → tuile « Biorythmes » 📈</div>
-      <p>Vos trois cycles du jour — <strong>physique</strong> (23 j), <strong>émotionnel</strong> (28 j), <strong>intellectuel</strong> (33 j) — comptés depuis votre naissance, avec les <strong>jours critiques</strong> et une courbe des prochains jours.</p>
+      <h2 data-i18n="g.bio.h2">8. Biorythmes</h2>
+      <div class="ou" data-i18n="g.bio.ou">Accueil → tuile « Biorythmes » 📈</div>
+      <p data-i18n="g.bio.p1">Vos trois cycles du jour — <strong>physique</strong> (23 j), <strong>émotionnel</strong> (28 j), <strong>intellectuel</strong> (33 j) — comptés depuis votre naissance, avec les <strong>jours critiques</strong> et une courbe des prochains jours.</p>
     </section>
 
     <section class="doc" id="previsions">
-      <h2>9. Prévisions & calendrier</h2>
-      <div class="ou">Accueil → tuiles « Prévisions » 📅 et « Calendrier »</div>
+      <h2 data-i18n="g.prev.h2">9. Prévisions & calendrier</h2>
+      <div class="ou" data-i18n="g.prev.ou">Accueil → tuiles « Prévisions » 📅 et « Calendrier »</div>
       <ul>
-        <li><strong>Prévisions</strong> : la vibration de chacun de vos 12 prochains mois et son nombre de jours porteurs.</li>
-        <li><strong>Calendrier</strong> : la grille du mois avec chaque jour coloré (porteur, repos, nombre maître).</li>
+        <li data-i18n="g.prev.li1"><strong>Prévisions</strong> : la vibration de chacun de vos 12 prochains mois et son nombre de jours porteurs.</li>
+        <li data-i18n="g.prev.li2"><strong>Calendrier</strong> : la grille du mois avec chaque jour coloré (porteur, repos, nombre maître).</li>
       </ul>
     </section>
 
     <section class="doc" id="ciel">
-      <h2>10. Le ciel du moment</h2>
-      <div class="ou">Accueil → tuile « Ciel du moment » 🌌</div>
-      <p>Ce qui se passe dans le ciel aujourd'hui : <strong>phase et signe de la Lune</strong>, période de <strong>Mercure rétrograde</strong>, et le <strong>nombre universel</strong> du jour, partagé par tous.</p>
+      <h2 data-i18n="g.ciel.h2">10. Le ciel du moment</h2>
+      <div class="ou" data-i18n="g.ciel.ou">Accueil → tuile « Ciel du moment » 🌌</div>
+      <p data-i18n="g.ciel.p1">Ce qui se passe dans le ciel aujourd'hui : <strong>phase et signe de la Lune</strong>, période de <strong>Mercure rétrograde</strong>, et le <strong>nombre universel</strong> du jour, partagé par tous.</p>
     </section>
 
     <section class="doc" id="guidance">
-      <h2>11. Guidance & journal</h2>
-      <div class="ou">Onglet « Guidance » · Journal sur l'accueil</div>
+      <h2 data-i18n="g.guid.h2">11. Guidance & journal</h2>
+      <div class="ou" data-i18n="g.guid.ou">Onglet « Guidance » · Journal sur l'accueil</div>
       <ul>
-        <li><strong>Guidance</strong> : répondez à un court questionnaire de vie et recevez une lecture personnalisée, domaine par domaine (amour, travail, argent, santé, spiritualité) selon votre année personnelle.</li>
-        <li><strong>Journal</strong> : notez la résonance de vos journées (1 à 5). La tuile <em>Tendances</em> affiche l'évolution dans le temps.</li>
+        <li data-i18n="g.guid.li1"><strong>Guidance</strong> : répondez à un court questionnaire de vie et recevez une lecture personnalisée, domaine par domaine (amour, travail, argent, santé, spiritualité) selon votre année personnelle.</li>
+        <li data-i18n="g.guid.li2"><strong>Journal</strong> : notez la résonance de vos journées (1 à 5). La tuile <em>Tendances</em> affiche l'évolution dans le temps.</li>
       </ul>
     </section>
 
     <section class="doc" id="carte">
-      <h2>12. Carte du jour & partage</h2>
-      <div class="ou">Accueil → tuile « Carte du jour » 🎴</div>
-      <p>Une belle image de votre journée (nombre du jour, signe, lune) prête à partager avec vos proches. Un bouton <em>Partager ma journée</em> permet aussi un partage texte rapide.</p>
+      <h2 data-i18n="g.carte.h2">12. Carte du jour & partage</h2>
+      <div class="ou" data-i18n="g.carte.ou">Accueil → tuile « Carte du jour » 🎴</div>
+      <p data-i18n="g.carte.p1">Une belle image de votre journée (nombre du jour, signe, lune) prête à partager avec vos proches. Un bouton <em>Partager ma journée</em> permet aussi un partage texte rapide.</p>
     </section>
 
     <section class="doc" id="pdf">
-      <h2>13. Rapport PDF complet</h2>
-      <div class="ou">Roue des Réglages ⚙︎ → « Rapport complet (PDF) »</div>
-      <p>Exportez tout votre thème (numérologie, astrologie, synthèse, année personnelle) dans un document PDF élégant à garder ou partager.</p>
+      <h2 data-i18n="g.pdf.h2">13. Rapport PDF complet</h2>
+      <div class="ou" data-i18n="g.pdf.ou">Roue des Réglages ⚙︎ → « Rapport complet (PDF) »</div>
+      <p data-i18n="g.pdf.p1">Exportez tout votre thème (numérologie, astrologie, synthèse, année personnelle) dans un document PDF élégant à garder ou partager.</p>
     </section>
 
     <section class="doc" id="outils">
-      <h2>14. Outils</h2>
-      <div class="ou">Accueil → tuile « Outils » 🧰</div>
+      <h2 data-i18n="g.outils.h2">14. Outils</h2>
+      <div class="ou" data-i18n="g.outils.ou">Accueil → tuile « Outils » 🧰</div>
       <ul>
-        <li><strong>Date favorable</strong> : les meilleurs jours à venir selon une intention (lancer, aimer, décider…).</li>
-        <li><strong>Prénom / nom d'usage</strong> : testez la vibration d'un prénom ou d'un pseudonyme.</li>
-        <li><strong>Adresse / numéro</strong> : le nombre d'un lieu ou d'un numéro.</li>
+        <li data-i18n="g.outils.li1"><strong>Date favorable</strong> : les meilleurs jours à venir selon une intention (lancer, aimer, décider…).</li>
+        <li data-i18n="g.outils.li2"><strong>Prénom / nom d'usage</strong> : testez la vibration d'un prénom ou d'un pseudonyme.</li>
+        <li data-i18n="g.outils.li3"><strong>Adresse / numéro</strong> : le nombre d'un lieu ou d'un numéro.</li>
       </ul>
     </section>
 
     <section class="doc" id="decouvrir">
-      <h2>15. Découvrir</h2>
-      <div class="ou">Accueil → tuile « Découvrir » 📖</div>
-      <p>Une rubrique pédagogique qui explique simplement tout ce que calcule l'app : les nombres, les cycles, la grille d'inclusion, l'astrologie, la synthèse. Idéal pour débuter.</p>
+      <h2 data-i18n="g.decouvrir.h2">15. Découvrir</h2>
+      <div class="ou" data-i18n="g.decouvrir.ou">Accueil → tuile « Découvrir » 📖</div>
+      <p data-i18n="g.decouvrir.p1">Une rubrique pédagogique qui explique simplement tout ce que calcule l'app : les nombres, les cycles, la grille d'inclusion, l'astrologie, la synthèse. Idéal pour débuter.</p>
     </section>
 
     <section class="doc" id="widget">
-      <h2>16. Widget écran d'accueil (Android)</h2>
-      <div class="ou">Écran d'accueil du téléphone</div>
-      <p>Posez votre <strong>nombre du jour</strong> directement sur l'écran d'accueil : restez appuyé sur l'écran d'accueil → <strong>Widgets</strong> → <strong>Numerocoon</strong>, puis glissez le widget. Un appui l'ouvre dans l'app.</p>
+      <h2 data-i18n="g.widget.h2">16. Widget écran d'accueil (Android)</h2>
+      <div class="ou" data-i18n="g.widget.ou">Écran d'accueil du téléphone</div>
+      <p data-i18n="g.widget.p1">Posez votre <strong>nombre du jour</strong> directement sur l'écran d'accueil : restez appuyé sur l'écran d'accueil → <strong>Widgets</strong> → <strong>Numerocoon</strong>, puis glissez le widget. Un appui l'ouvre dans l'app.</p>
     </section>
 
     <section class="doc" id="reglages">
-      <h2>17. Réglages</h2>
-      <div class="ou">Roue crantée ⚙︎ en haut à droite</div>
+      <h2 data-i18n="g.reglages.h2">17. Réglages</h2>
+      <div class="ou" data-i18n="g.reglages.ou">Roue crantée ⚙︎ en haut à droite</div>
       <ul>
-        <li><strong>Langue</strong> : 9 langues (français, anglais, allemand, italien, portugais, espagnol, suédois, norvégien, finnois).</li>
-        <li><strong>Taille du texte</strong> : petite / normale / grande.</li>
-        <li><strong>Rappel quotidien</strong> : une notification à l'heure de votre choix.</li>
-        <li><strong>Sauvegarde & restauration</strong> : exportez vos données dans un fichier et restaurez-les sur un autre appareil (tout reste local).</li>
+        <li data-i18n="g.reglages.li1"><strong>Langue</strong> : 9 langues (français, anglais, allemand, italien, portugais, espagnol, suédois, norvégien, finnois).</li>
+        <li data-i18n="g.reglages.li2"><strong>Taille du texte</strong> : petite / normale / grande.</li>
+        <li data-i18n="g.reglages.li3"><strong>Rappel quotidien</strong> : une notification à l'heure de votre choix.</li>
+        <li data-i18n="g.reglages.li4"><strong>Sauvegarde & restauration</strong> : exportez vos données dans un fichier et restaurez-les sur un autre appareil (tout reste local).</li>
       </ul>
     </section>
 
     <section class="doc" id="maj">
-      <h2>18. Mises à jour</h2>
-      <div class="ou">Automatique · Réglages ⚙︎ → « Mises à jour »</div>
-      <p>Au lancement, l'app vérifie s'il existe une version plus récente et vous propose de la télécharger. Vous pouvez aussi vérifier manuellement depuis les Réglages. Vos données sont conservées d'une version à l'autre.</p>
+      <h2 data-i18n="g.maj.h2">18. Mises à jour</h2>
+      <div class="ou" data-i18n="g.maj.ou">Automatique · Réglages ⚙︎ → « Mises à jour »</div>
+      <p data-i18n="g.maj.p1">Au lancement, l'app vérifie s'il existe une version plus récente et vous propose de la télécharger. Vous pouvez aussi vérifier manuellement depuis les Réglages. Vos données sont conservées d'une version à l'autre.</p>
     </section>
 
     <section class="doc" id="confidentialite">
-      <h2>19. Confidentialité</h2>
-      <div class="ou">—</div>
-      <p>Numerocoon ne collecte <strong>aucune donnée</strong> : pas de compte, pas de publicité, pas de traceur. Tout ce que vous saisissez reste sur votre appareil. Détails dans la <a href="privacy.html">politique de confidentialité</a>.</p>
-      <div class="astuce">Numerocoon propose un support d'introspection et de bien-être fondé sur des traditions symboliques. Ce n'est ni une prédiction, ni un avis médical, financier ou juridique.</div>
+      <h2 data-i18n="g.conf.h2">19. Confidentialité</h2>
+      <div class="ou" data-i18n="g.conf.ou">—</div>
+      <p data-i18n="g.conf.p1">Numerocoon ne collecte <strong>aucune donnée</strong> : pas de compte, pas de publicité, pas de traceur. Tout ce que vous saisissez reste sur votre appareil. Détails dans la <a href="privacy.html">politique de confidentialité</a>.</p>
+      <div class="astuce" data-i18n="g.conf.astuce">Numerocoon propose un support d'introspection et de bien-être fondé sur des traditions symboliques. Ce n'est ni une prédiction, ni un avis médical, financier ou juridique.</div>
     </section>
   </main>
 </div>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap" data-i18n="g.footer.line">
     <strong>Numerocoon</strong> — par Bengacoon · <a href="index.html">Accueil</a> · <a href="privacy.html">Confidentialité</a><br>
     © 2026 Bengacoon
   </div>
 </footer>
 
+<script src="i18n.js" defer></script>
 </body>
 </html>

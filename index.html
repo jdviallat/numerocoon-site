@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Numerocoon — Numérologie & horoscope de bien-être</title>
-<meta name="description" content="Numerocoon, par Bengacoon : votre thème numérologique détaillé, votre ascendant calculé depuis l'heure de naissance, horoscope, compatibilité et guidance. Gratuit, en 9 langues.">
+<title data-i18n="idx.meta.title">Numerocoon — Numérologie & horoscope de bien-être</title>
+<meta name="description" content="Numerocoon, par Bengacoon : votre thème numérologique détaillé, votre ascendant calculé depuis l'heure de naissance, horoscope, compatibilité et guidance. Gratuit, en 9 langues." data-i18n="idx.meta.desc" data-i18n-attr="content">
 <link rel="icon" href="assets/favicon.png">
 <meta property="og:title" content="Numerocoon — Numérologie & horoscope">
 <meta property="og:description" content="Chemin de vie, ascendant, synthèse, compatibilité et guidance personnalisée. Gratuit, sans publicité, en 9 langues.">
@@ -108,6 +108,8 @@
   footer{background:var(--nuit-2);color:#9AA6B8;text-align:center;padding:40px 0;font-size:13.5px;border-top:1px solid var(--carte-bord)}
   footer a{color:var(--or);text-decoration:none}
   footer .disc{max-width:660px;margin:16px auto 0;font-size:12px;color:#75808F;line-height:1.5}
+  .lang-select{margin-left:12px;background:var(--carte);color:var(--texte);border:1px solid var(--carte-bord);border-radius:10px;padding:7px 10px;font-size:13px;font-weight:600;cursor:pointer}
+  @media(max-width:640px){.lang-select{margin-left:auto}}
 </style>
 </head>
 <body>
@@ -115,13 +117,20 @@
 <header>
   <div class="wrap">
     <img src="assets/icon.png" alt="Numerocoon">
-    <div class="brand">Numerocoon<small>par Bengacoon</small></div>
+    <div class="brand">Numerocoon<small data-i18n="brand.by">par Bengacoon</small></div>
     <nav>
-      <a href="index.html">Accueil</a>
-      <a href="index.html#fonctions">Fonctions</a>
-      <a href="guide.html">Guide</a>
-      <a href="privacy.html">Confidentialité</a>
+      <a href="index.html" data-i18n="nav.home">Accueil</a>
+      <a href="index.html#fonctions" data-i18n="nav.features">Fonctions</a>
+      <a href="guide.html" data-i18n="nav.guide">Guide</a>
+      <a href="privacy.html" data-i18n="nav.privacy">Confidentialité</a>
     </nav>
+    <select id="ncLang" aria-label="Language" class="lang-select">
+      <option value="fr">Français</option><option value="en">English</option>
+      <option value="de">Deutsch</option><option value="it">Italiano</option>
+      <option value="pt">Português</option><option value="es">Español</option>
+      <option value="sv">Svenska</option><option value="no">Norsk</option>
+      <option value="fi">Suomi</option>
+    </select>
   </div>
 </header>
 
@@ -131,18 +140,18 @@
   <span class="star s4"></span><span class="star s5"></span>
   <div class="wrap">
     <img class="logo" src="assets/icon.png" alt="Numerocoon">
-    <div class="par">par Bengacoon</div>
+    <div class="par" data-i18n="brand.by">par Bengacoon</div>
     <h1>Numerocoon</h1>
-    <p class="lead">Numérologie & horoscope réunis. À partir de votre date, votre heure et votre lieu de naissance, découvrez votre thème, votre ascendant et une guidance qui vous ressemble.</p>
+    <p class="lead" data-i18n="idx.hero.lead">Numérologie & horoscope réunis. À partir de votre date, votre heure et votre lieu de naissance, découvrez votre thème, votre ascendant et une guidance qui vous ressemble.</p>
     <div class="stores">
       <a class="store" href="https://github.com/jdviallat/numerocoon/releases/latest">
-        <span class="em">⬇</span><span><small>Android · APK direct</small>Télécharger</span>
+        <span class="em">⬇</span><span data-i18n="idx.store.android"><small>Android · APK direct</small>Télécharger</span>
       </a>
       <a class="store soon" href="#" aria-disabled="true">
-        <span class="em">▶</span><span><small>Bientôt sur</small>Google&nbsp;Play</span>
+        <span class="em">▶</span><span data-i18n="idx.store.play"><small>Bientôt sur</small>Google&nbsp;Play</span>
       </a>
       <a class="store soon" href="#">
-        <span class="em"></span><span><small>Bientôt sur</small>App&nbsp;Store</span>
+        <span class="em"></span><span data-i18n="idx.store.ios"><small>Bientôt sur</small>App&nbsp;Store</span>
       </a>
     </div>
   </div>
@@ -150,33 +159,33 @@
 
 <section id="fonctions">
   <div class="wrap">
-    <div class="eyebrow">Ce que fait l'app</div>
-    <h2>Un portrait complet, en douceur</h2>
-    <p class="sub">Comprendre vos nombres, lire votre ciel et avancer jour après jour — sans compte, sans jargon.</p>
+    <div class="eyebrow" data-i18n="idx.func.eyebrow">Ce que fait l'app</div>
+    <h2 data-i18n="idx.func.h2">Un portrait complet, en douceur</h2>
+    <p class="sub" data-i18n="idx.func.sub">Comprendre vos nombres, lire votre ciel et avancer jour après jour — sans compte, sans jargon.</p>
     <div class="grid">
       <div class="card">
-        <span class="em">🔢</span><h3>Numérologie détaillée</h3>
-        <p>Chemin de vie, expression, âme, personnalité, défis et cycles, grille d'inclusion et dettes karmiques. Jusqu'à la part d'ombre de chaque nombre, pour un portrait honnête.</p>
+        <span class="em">🔢</span><h3 data-i18n="idx.card.numero.h3">Numérologie détaillée</h3>
+        <p data-i18n="idx.card.numero.p">Chemin de vie, expression, âme, personnalité, défis et cycles, grille d'inclusion et dettes karmiques. Jusqu'à la part d'ombre de chaque nombre, pour un portrait honnête.</p>
       </div>
       <div class="card">
-        <span class="em">♒</span><h3>Ascendant & horoscope</h3>
-        <p>Votre signe solaire et votre ascendant, calculé astronomiquement depuis l'heure et le lieu de naissance. Horoscope du jour, de la semaine et jours favorables.</p>
+        <span class="em">♒</span><h3 data-i18n="idx.card.ascendant.h3">Ascendant & horoscope</h3>
+        <p data-i18n="idx.card.ascendant.p">Votre signe solaire et votre ascendant, calculé astronomiquement depuis l'heure et le lieu de naissance. Horoscope du jour, de la semaine et jours favorables.</p>
       </div>
       <div class="card">
-        <span class="em">✷</span><h3>Synthèse</h3>
-        <p>Une lecture qui relie tout : Soleil × Ascendant × chemin de vie, et la combinaison de vos éléments dominants — feu, terre, air, eau.</p>
+        <span class="em">✷</span><h3 data-i18n="idx.card.synthese.h3">Synthèse</h3>
+        <p data-i18n="idx.card.synthese.p">Une lecture qui relie tout : Soleil × Ascendant × chemin de vie, et la combinaison de vos éléments dominants — feu, terre, air, eau.</p>
       </div>
       <div class="card">
-        <span class="em">❤</span><h3>Compatibilité détaillée</h3>
-        <p>Enregistrez vos proches et comparez vos thèmes sur 8 dimensions notées — amour, passion, amitié, communication, travail, valeurs, quotidien, stabilité — avec forces et points de vigilance.</p>
+        <span class="em">❤</span><h3 data-i18n="idx.card.compat.h3">Compatibilité détaillée</h3>
+        <p data-i18n="idx.card.compat.p">Enregistrez vos proches et comparez vos thèmes sur 8 dimensions notées — amour, passion, amitié, communication, travail, valeurs, quotidien, stabilité — avec forces et points de vigilance.</p>
       </div>
       <div class="card">
-        <span class="em">🧭</span><h3>Guidance & journal</h3>
-        <p>Un questionnaire de vie, puis une guidance personnalisée domaine par domaine selon votre année personnelle. Un journal pour noter la résonance de vos journées.</p>
+        <span class="em">🧭</span><h3 data-i18n="idx.card.guidance.h3">Guidance & journal</h3>
+        <p data-i18n="idx.card.guidance.p">Un questionnaire de vie, puis une guidance personnalisée domaine par domaine selon votre année personnelle. Un journal pour noter la résonance de vos journées.</p>
       </div>
       <div class="card">
-        <span class="em">🔔</span><h3>Rappel & partage</h3>
-        <p>Un rappel quotidien à l'heure de votre choix pour ne rien manquer, et le partage de votre journée en un geste, quand vous le souhaitez.</p>
+        <span class="em">🔔</span><h3 data-i18n="idx.card.rappel.h3">Rappel & partage</h3>
+        <p data-i18n="idx.card.rappel.p">Un rappel quotidien à l'heure de votre choix pour ne rien manquer, et le partage de votre journée en un geste, quand vous le souhaitez.</p>
       </div>
     </div>
   </div>
@@ -185,25 +194,25 @@
 <section id="gratuit" class="gratuit">
   <div class="wrap">
     <div class="box">
-      <span class="price">100 % gratuit</span>
-      <h2>Tout est offert, sans publicité</h2>
-      <p class="sub" style="margin-bottom:6px">Aucun achat, aucun abonnement, aucune fonction verrouillée.</p>
+      <span class="price" data-i18n="idx.free.price">100 % gratuit</span>
+      <h2 data-i18n="idx.free.h2">Tout est offert, sans publicité</h2>
+      <p class="sub" style="margin-bottom:6px" data-i18n="idx.free.sub">Aucun achat, aucun abonnement, aucune fonction verrouillée.</p>
       <ul>
-        <li>Thème numérologique complet</li>
-        <li>Ascendant, horoscope et jours favorables</li>
-        <li>Synthèse, compatibilité et guidance</li>
-        <li>Journal, rappels et partage</li>
+        <li data-i18n="idx.free.li1">Thème numérologique complet</li>
+        <li data-i18n="idx.free.li2">Ascendant, horoscope et jours favorables</li>
+        <li data-i18n="idx.free.li3">Synthèse, compatibilité et guidance</li>
+        <li data-i18n="idx.free.li4">Journal, rappels et partage</li>
       </ul>
-      <p class="free">Numerocoon est un cadeau de la galaxie Bengacoon — à découvrir en toute liberté.</p>
+      <p class="free" data-i18n="idx.free.note">Numerocoon est un cadeau de la galaxie Bengacoon — à découvrir en toute liberté.</p>
     </div>
   </div>
 </section>
 
 <section class="langues">
   <div class="wrap">
-    <div class="eyebrow">Pour tout le monde</div>
-    <h2>Disponible en 9 langues</h2>
-    <p class="sub">L'application est entièrement traduite, jusqu'aux textes de guidance.</p>
+    <div class="eyebrow" data-i18n="idx.lang.eyebrow">Pour tout le monde</div>
+    <h2 data-i18n="idx.lang.h2">Disponible en 9 langues</h2>
+    <p class="sub" data-i18n="idx.lang.sub">L'application est entièrement traduite, jusqu'aux textes de guidance.</p>
     <div class="chips">
       <span class="chip">Français</span><span class="chip">English</span><span class="chip">Deutsch</span>
       <span class="chip">Italiano</span><span class="chip">Português</span><span class="chip">Español</span>
@@ -214,42 +223,43 @@
 
 <section id="versions">
   <div class="wrap">
-    <div class="eyebrow">Toujours en mouvement</div>
-    <h2>Les dernières versions</h2>
-    <p class="sub">Numerocoon évolue régulièrement — voici les nouveautés récentes. L'historique complet est sur GitHub.</p>
+    <div class="eyebrow" data-i18n="idx.ver.eyebrow">Toujours en mouvement</div>
+    <h2 data-i18n="idx.ver.h2">Les dernières versions</h2>
+    <p class="sub" data-i18n="idx.ver.sub">Numerocoon évolue régulièrement — voici les nouveautés récentes. L'historique complet est sur GitHub.</p>
     <div class="vlist">
-      <div class="vrow"><div class="vnum">0.20.1<small>Fiche animale</small></div><p>La fiche d'un animal est bien plus complète : forces, besoins, place dans la famille, mot doux et énergie du jour.</p></div>
-      <div class="vrow"><div class="vnum">0.20<small>Icône & guide</small></div><p>Nouvelle icône (médaillon d'or, croissant de lune) et un guide d'utilisation complet intégré, accessible hors ligne.</p></div>
-      <div class="vrow"><div class="vnum">0.19.1<small>Fiches & photos</small></div><p>Une photo sur chaque profil, la fiche complète d'une personne (signe, ascendant, nombres) et la fiche numérologique des animaux.</p></div>
-      <div class="vrow"><div class="vnum">0.19<small>Profils & animaux</small></div><p>Gérez plusieurs profils (conjoint, enfants, famille…) avec ajout/édition/suppression et liste de compatibilité, plus des profils pour vos animaux.</p></div>
-      <div class="vrow"><div class="vnum">0.18<small>Calendrier & ciel</small></div><p>Calendrier numérologique du mois, « ciel du moment » (Lune, Mercure rétrograde, nombre universel) et numérologie de votre animal de compagnie.</p></div>
-      <div class="vrow"><div class="vnum">0.17<small>Widget d'accueil</small></div><p>Un widget Android pour poser votre nombre du jour directement sur l'écran d'accueil de votre téléphone.</p></div>
-      <div class="vrow"><div class="vnum">0.16<small>Carte, roue & prévisions</small></div><p>Carte du jour à partager, roue du thème (Soleil + Ascendant), prévisions sur 12 mois, tendances du journal, sauvegarde/restauration, taille du texte réglable et tour de bienvenue.</p></div>
-      <div class="vrow"><div class="vnum">0.15.1<small>MAJ directes</small></div><p>La version APK direct télécharge et installe désormais ses mises à jour depuis l'application, sans passer par le navigateur.</p></div>
-      <div class="vrow"><div class="vnum">0.15<small>Biorythmes & PDF</small></div><p>Biorythmes du jour (physique, émotionnel, intellectuel), rubrique « Découvrir » pour tout comprendre, et export du thème complet en PDF.</p></div>
-      <div class="vrow"><div class="vnum">0.14<small>iOS &amp; Android</small></div><p>Alignement des versions iOS et Android et préparation de la publication sur les deux plateformes.</p></div>
-      <div class="vrow"><div class="vnum">0.13<small>Réglages &amp; marque</small></div><p>Roue crantée d'accès aux Réglages et signature « par Bengacoon » sur l'accueil.</p></div>
-      <div class="vrow"><div class="vnum">0.12<small>100 % traduit</small></div><p>Localisation complète, jusqu'aux phrases assemblées, dans les 9 langues.</p></div>
+      <div class="vrow"><div class="vnum">0.20.1<small data-i18n="idx.ver.v1.label">Fiche animale</small></div><p data-i18n="idx.ver.v1.desc">La fiche d'un animal est bien plus complète : forces, besoins, place dans la famille, mot doux et énergie du jour.</p></div>
+      <div class="vrow"><div class="vnum">0.20<small data-i18n="idx.ver.v2.label">Icône & guide</small></div><p data-i18n="idx.ver.v2.desc">Nouvelle icône (médaillon d'or, croissant de lune) et un guide d'utilisation complet intégré, accessible hors ligne.</p></div>
+      <div class="vrow"><div class="vnum">0.19.1<small data-i18n="idx.ver.v3.label">Fiches & photos</small></div><p data-i18n="idx.ver.v3.desc">Une photo sur chaque profil, la fiche complète d'une personne (signe, ascendant, nombres) et la fiche numérologique des animaux.</p></div>
+      <div class="vrow"><div class="vnum">0.19<small data-i18n="idx.ver.v4.label">Profils & animaux</small></div><p data-i18n="idx.ver.v4.desc">Gérez plusieurs profils (conjoint, enfants, famille…) avec ajout/édition/suppression et liste de compatibilité, plus des profils pour vos animaux.</p></div>
+      <div class="vrow"><div class="vnum">0.18<small data-i18n="idx.ver.v5.label">Calendrier & ciel</small></div><p data-i18n="idx.ver.v5.desc">Calendrier numérologique du mois, « ciel du moment » (Lune, Mercure rétrograde, nombre universel) et numérologie de votre animal de compagnie.</p></div>
+      <div class="vrow"><div class="vnum">0.17<small data-i18n="idx.ver.v6.label">Widget d'accueil</small></div><p data-i18n="idx.ver.v6.desc">Un widget Android pour poser votre nombre du jour directement sur l'écran d'accueil de votre téléphone.</p></div>
+      <div class="vrow"><div class="vnum">0.16<small data-i18n="idx.ver.v7.label">Carte, roue & prévisions</small></div><p data-i18n="idx.ver.v7.desc">Carte du jour à partager, roue du thème (Soleil + Ascendant), prévisions sur 12 mois, tendances du journal, sauvegarde/restauration, taille du texte réglable et tour de bienvenue.</p></div>
+      <div class="vrow"><div class="vnum">0.15.1<small data-i18n="idx.ver.v8.label">MAJ directes</small></div><p data-i18n="idx.ver.v8.desc">La version APK direct télécharge et installe désormais ses mises à jour depuis l'application, sans passer par le navigateur.</p></div>
+      <div class="vrow"><div class="vnum">0.15<small data-i18n="idx.ver.v9.label">Biorythmes & PDF</small></div><p data-i18n="idx.ver.v9.desc">Biorythmes du jour (physique, émotionnel, intellectuel), rubrique « Découvrir » pour tout comprendre, et export du thème complet en PDF.</p></div>
+      <div class="vrow"><div class="vnum">0.14<small data-i18n="idx.ver.v10.label">iOS &amp; Android</small></div><p data-i18n="idx.ver.v10.desc">Alignement des versions iOS et Android et préparation de la publication sur les deux plateformes.</p></div>
+      <div class="vrow"><div class="vnum">0.13<small data-i18n="idx.ver.v11.label">Réglages &amp; marque</small></div><p data-i18n="idx.ver.v11.desc">Roue crantée d'accès aux Réglages et signature « par Bengacoon » sur l'accueil.</p></div>
+      <div class="vrow"><div class="vnum">0.12<small data-i18n="idx.ver.v12.label">100 % traduit</small></div><p data-i18n="idx.ver.v12.desc">Localisation complète, jusqu'aux phrases assemblées, dans les 9 langues.</p></div>
     </div>
-    <a class="more" href="https://github.com/jdviallat/numerocoon/blob/main/CHANGELOG.md">Voir tout l'historique des versions →</a>
+    <a class="more" href="https://github.com/jdviallat/numerocoon/blob/main/CHANGELOG.md" data-i18n="idx.ver.more">Voir tout l'historique des versions →</a>
   </div>
 </section>
 
 <section id="confidentialite" class="privacy">
   <div class="wrap">
-    <div class="eyebrow">Vos données, chez vous</div>
-    <h2>Rien ne quitte votre téléphone</h2>
-    <p class="sub">Aucun compte à créer, aucune donnée personnelle collectée. Votre profil et vos proches restent sur votre appareil. La seule connexion sert à vérifier les mises à jour — sans rien envoyer vous concernant.</p>
+    <div class="eyebrow" data-i18n="idx.priv.eyebrow">Vos données, chez vous</div>
+    <h2 data-i18n="idx.priv.h2">Rien ne quitte votre téléphone</h2>
+    <p class="sub" data-i18n="idx.priv.sub">Aucun compte à créer, aucune donnée personnelle collectée. Votre profil et vos proches restent sur votre appareil. La seule connexion sert à vérifier les mises à jour — sans rien envoyer vous concernant.</p>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap" data-i18n="idx.footer">
     <strong>Numerocoon</strong> — par Bengacoon · Disponible en 9 langues<br>
     <a href="guide.html">Guide d'utilisation</a> &nbsp;·&nbsp; <a href="privacy.html">Politique de confidentialité</a> &nbsp;·&nbsp; © 2026 Bengacoon
     <p class="disc">Numerocoon propose un support d'introspection et de bien-être fondé sur des traditions symboliques (numérologie, astrologie). Ce n'est ni une prédiction, ni un dispositif médical, ni un avis financier ou juridique, et cela ne remplace pas l'avis d'un professionnel qualifié.</p>
   </div>
 </footer>
 
+<script src="i18n.js" defer></script>
 </body>
 </html>
